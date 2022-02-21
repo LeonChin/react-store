@@ -11,14 +11,14 @@ const Products = () => {
   const [loading, setLoading] = useState(true);
   const [shoes, setShoes] = useState([]);
   const [sourceShoes, setSourceShoes] = useState([]);
-  const url = "http://localhost:3004/products";
+  // const url = "http://localhost:3004/products";
   const [rerender, setRerender] = useState(false);
   const [cartNum, setCartNum] = useState(0);
 
   const fetchData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(url);
+      const response = await axios.get("/products");
       setLoading(false);
       setShoes(response.data);
       setSourceShoes(response.data);
@@ -74,7 +74,7 @@ const Products = () => {
   };
 
   const initCartNum = async () => {
-    const response = await axios.get("http://localhost:3004/carts");
+    const response = await axios.get("/carts");
     const carts = response.data || [];
     const carNum = carts
       .map((cart) => cart.mount)

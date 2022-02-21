@@ -40,14 +40,12 @@ export const Product = ({
       return;
     }
     try {
-      const response = await axios.get(
-        `http://localhost:3004/carts?productId=${id}`
-      );
+      const response = await axios.get(`/carts?productId=${id}`);
       const carts = response.data;
       if (carts && carts.length > 0) {
         const cart = carts[0];
         cart.mount += 1;
-        await axios.put(`http://localhost:3004/carts/${cart.id}`, cart);
+        await axios.put(`/carts/${cart.id}`, cart);
       } else {
         const cart = {
           productId: id,
@@ -56,7 +54,7 @@ export const Product = ({
           price,
           mount: 1,
         };
-        await axios.post("http://localhost:3004/carts", cart);
+        await axios.post("/carts", cart);
       }
       toast.success("add cart success");
       updateCartNum();

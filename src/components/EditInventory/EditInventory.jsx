@@ -32,7 +32,7 @@ export default function EditInventory({
   const submit = (e) => {
     e.preventDefault();
     const product = { ...newShoe };
-    axios.put(`http://localhost:3004/products/${id}`, product).then((res) => {
+    axios.put(`/products/${id}`, product).then((res) => {
       console.log(res.data);
       toast.success("Eidt items successfully");
     });
@@ -41,7 +41,7 @@ export default function EditInventory({
   };
 
   const onDelete = (e) => {
-    axios.delete(`http://localhost:3004/products/${id}`).then((res) => {
+    axios.delete(`/products/${id}`).then((res) => {
       console.log(res.data);
       toast.success("Delete items successfully");
     });
