@@ -23,7 +23,7 @@ export default function AddInventory({ close }) {
   const submit = (e) => {
     e.preventDefault();
     const product = { ...newShoe };
-    axios.post("http://localhost:3004/products", product).then((res) => {
+    axios.post("/products", product).then((res) => {
       console.log(res.data);
       toast.success("Add items successfully");
     });

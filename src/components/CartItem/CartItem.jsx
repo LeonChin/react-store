@@ -12,13 +12,13 @@ export const CartItem = (props) => {
     const newMount = parseInt(e.target.value);
     setMount(newMount);
     const newCart = { ...props.cart, mount: newMount };
-    axios.put(`http://localhost:3004/carts/${id}`, newCart).then((res) => {
+    axios.put(`/carts/${id}`, newCart).then((res) => {
       props.updateCart(newCart);
     });
   };
 
   const deleteCart = () => {
-    axios.delete(`http://localhost:3004/carts/${id}`).then((res) => {
+    axios.delete(`/carts/${id}`).then((res) => {
       props.deleteCart(props.cart);
     });
   };
