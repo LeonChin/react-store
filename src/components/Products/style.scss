@@ -1,0 +1,16 @@
+.product-fade-enter {
+    opacity: 0.1;
+}
+
+.product-fade-enter-active {
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+
+.product-fade-exit {
+    opacity: 1;
+}
+
+.product-fade-exit-active {
+    opacity: 1;
+}
