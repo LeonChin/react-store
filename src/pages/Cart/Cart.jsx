@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../../utility/axios";
 import React, { useEffect, useState } from "react";
 import { CartItem } from "../../components/CartItem/CartItem";
 import { Layout } from "../../utility/Layout";
@@ -8,7 +8,7 @@ const Cart = () => {
   const [carts, setCarts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3004/carts").then((res) => setCarts(res.data));
+    axios.get("/carts").then((res) => setCarts(res.data));
   }, []);
 
   const totalPrice = () => {
