@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../../utility/axios";
 import React from "react";
 import { useState } from "react";
 import { formatPrice } from "../../utility/formatPrice";

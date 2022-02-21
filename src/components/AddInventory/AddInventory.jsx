@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import axios from "../../utility/axios";
 import PubSub from "pubsub-js";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

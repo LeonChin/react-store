@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from "react";
 import { ToolBox } from "../ToolBox/ToolBox";
 import { Product } from "../Product/Product";
-import axios from "axios";
+import axios from "../../utility/axios";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Panel } from "../Panel/Panel";
 import "./style.scss";

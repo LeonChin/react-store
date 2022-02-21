@@ -3,7 +3,7 @@ import { formatPrice } from "../../utility/formatPrice";
 import { Panel } from "../Panel/Panel";
 import EditInventory from "../EditInventory/EditInventory";
 import PubSub from "pubsub-js";
-import axios from "axios";
+import axios from "../../utility/axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router";
 
